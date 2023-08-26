@@ -7,7 +7,7 @@ app = Flask(__name__)
 nlp = spacy.load("en_core_web_lg")
 
 
-@app.route("/api", method="POST")
+@app.route("/api", methods=["POST"])
 def api():
     if (request.json is None
         or "text1" not in request.json
